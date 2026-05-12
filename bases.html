@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Базы отдыха Риддера: BearLog, Риддер Тайга Шале, Кедровка, Igloo Lodges. Цены, услуги, бронирование. ВКО Казахстан.">
+  <meta name="keywords" content="базы отдыха Риддер, BearLog, Кедровка, Igloo Lodges, Тайга Шале, ВКО Казахстан, бронирование">
+  <meta property="og:title" content="Базы отдыха Риддера — Демалыс базалары">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1605649487212-47bdab064df7?w=1200&q=80">
+  <meta name="theme-color" content="#14532d">
+  <title>Базы отдыха Риддера | Ridder Rest Bases</title>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Базы отдыха Риддера",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"BearLog","url":"https://bearlog.kz"},
+      {"@type":"ListItem","position":2,"name":"Риддер Тайга Шале","url":"https://visiteast.kz"},
+      {"@type":"ListItem","position":3,"name":"Кедровка","url":"https://limpopotravel.kz"},
+      {"@type":"ListItem","position":4,"name":"Igloo Lodges"}
+    ]
+  }
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-white text-gray-900">
+
+<!-- ── NAVBAR ─────────────────────────────────────────────────────────── -->
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 py-4">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2">
+        <span class="text-2xl">🏔️</span>
+        <span class="text-white font-bold text-xl drop-shadow-lg font-playfair" data-i18n="brand">Риддер</span>
+      </a>
+      <div class="hidden md:flex items-center gap-7">
+        <a href="index.html" class="text-white/90 hover:text-green-300 transition-colors text-sm font-medium" data-i18n="nav.home">Главная</a>
+        <a href="sights.html" class="text-white/90 hover:text-green-300 transition-colors text-sm font-medium" data-i18n="nav.sights">Достопримечательности</a>
+        <a href="bases.html" class="text-green-300 font-semibold text-sm border-b border-green-300" data-i18n="nav.bases">Базы отдыха</a>
+        <a href="index.html#gallery" class="text-white/90 hover:text-green-300 transition-colors text-sm font-medium" data-i18n="nav.gallery">Галерея</a>
+        <a href="index.html#contact" class="text-white/90 hover:text-green-300 transition-colors text-sm font-medium" data-i18n="nav.contact">Контакты</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <div class="flex rounded-full overflow-hidden border border-white/40 text-sm">
+          <button class="lang-btn px-3 py-1 transition-colors" data-lang="ru" onclick="setLang('ru')">RU</button>
+          <button class="lang-btn px-3 py-1 transition-colors" data-lang="kz" onclick="setLang('kz')">ҚЗ</button>
+        </div>
+        <button class="md:hidden text-white p-1" onclick="toggleMobileMenu()" aria-label="Меню">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden mt-4 pb-3 border-t border-white/20 pt-3">
+      <div class="flex flex-col gap-3">
+        <a href="index.html" class="text-white hover:text-green-300 text-sm font-medium" data-i18n="nav.home">Главная</a>
+        <a href="sights.html" class="text-white hover:text-green-300 text-sm font-medium" data-i18n="nav.sights">Достопримечательности</a>
+        <a href="bases.html" class="text-green-300 text-sm font-semibold" data-i18n="nav.bases">Базы отдыха</a>
+        <a href="index.html#gallery" class="text-white hover:text-green-300 text-sm font-medium" data-i18n="nav.gallery">Галерея</a>
+        <a href="index.html#contact" class="text-white hover:text-green-300 text-sm font-medium" data-i18n="nav.contact">Контакты</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ── PAGE HERO ──────────────────────────────────────────────────────── -->
+<section class="hero-section relative h-72 sm:h-96 flex items-end justify-start overflow-hidden">
+  <div class="hero-bg absolute inset-0 bg-cover bg-center scale-105"
+       style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/2/20/Summer_residences_at_a_gromatushinskogo_canyon_-_panoramio.jpg')"></div>
+  <div class="absolute inset-0 bg-gradient-to-b from-green-950/40 via-green-900/30 to-green-950/80"></div>
+  <div class="relative z-10 pb-10 px-6 sm:px-10 max-w-7xl mx-auto w-full">
+    <nav class="text-green-300 text-sm mb-3 flex items-center gap-2" aria-label="breadcrumb">
+      <a href="index.html" class="hover:text-white transition-colors" data-i18n="nav.home">Главная</a>
+      <span class="text-green-500">›</span>
+      <span class="text-white" data-i18n="nav.bases">Базы отдыха</span>
+    </nav>
+    <h1 class="font-playfair text-3xl sm:text-5xl font-bold text-white drop-shadow-2xl" data-i18n="bases.page.hero">
+      Базы отдыха Риддера
+    </h1>
+    <p class="text-green-200 mt-2 text-lg" data-i18n="bases.page.sub">Комфорт среди дикой природы</p>
+  </div>
+</section>
+
+<!-- ── FILTERS ────────────────────────────────────────────────────────── -->
+<section class="py-8 bg-green-50 border-b border-green-100 sticky top-16 z-30">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-wrap gap-3 items-center">
+      <span class="text-green-800 font-semibold text-sm hidden sm:block">Фильтр:</span>
+      <button class="filter-btn bg-green-700 text-white px-5 py-2 rounded-full text-sm font-medium shadow-sm" data-filter="all" data-i18n="bases.filter.all">Все базы</button>
+      <button class="filter-btn bg-white text-green-700 border border-green-300 px-5 py-2 rounded-full text-sm font-medium" data-filter="budget" data-i18n="bases.filter.budget">До 50 000 тг</button>
+      <button class="filter-btn bg-white text-green-700 border border-green-300 px-5 py-2 rounded-full text-sm font-medium" data-filter="mid" data-i18n="bases.filter.mid">50 000–100 000 тг</button>
+      <button class="filter-btn bg-white text-green-700 border border-green-300 px-5 py-2 rounded-full text-sm font-medium" data-filter="luxury" data-i18n="bases.filter.luxury">Свыше 100 000 тг</button>
+    </div>
+  </div>
+</section>
+
+<!-- ── BASES GRID ─────────────────────────────────────────────────────── -->
+<section class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+
+      <!-- ── BearLog ──────────────────────────────────────────────────── -->
+      <div id="bearlog" class="base-filterable fade-in-card rounded-2xl overflow-hidden shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 scroll-mt-24" data-price="luxury">
+        <div class="relative h-64 overflow-hidden group">
+          <img loading="lazy"
+               src="https://visiteast.kz/assets/components/phpthumbof/cache/gromotuha.d816bd4f128ee378c00b60cd38f4ec4c.jpg"
+               alt="BearLog база отдыха Риддер бассейн SPA"
+               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+          <div class="absolute top-4 left-4 flex gap-2">
+            <span class="bg-amber-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow">⭐ PREMIUM</span>
+            <span class="bg-green-700/80 text-white text-xs font-bold px-3 py-1.5 rounded-full backdrop-blur-sm">SPA</span>
+          </div>
+          <div class="absolute bottom-4 left-4 right-4 flex items-end justify-between">
+            <h2 class="font-playfair text-2xl font-bold text-white drop-shadow-lg">BearLog</h2>
+            <span class="price-badge shadow-lg">от 80 000 тг/сут</span>
+          </div>
+        </div>
+
+        <div class="p-7">
+          <p class="text-gray-600 leading-relaxed mb-5" data-i18n="bases.bearlog.desc">
+            Премиальная база отдыха с коттеджами класса люкс...
+          </p>
+
+          <!-- Services tags -->
+          <div class="mb-5">
+            <p class="text-xs text-gray-400 font-semibold uppercase tracking-wide mb-2" data-i18n="bases.services">Услуги</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="tag">🏠 Коттеджи</span>
+              <span class="tag">🏊 Бассейн</span>
+              <span class="tag">🏎️ Багги</span>
+              <span class="tag">🛷 Снегоходы</span>
+              <span class="tag">💆 SPA</span>
+              <span class="tag">🛁 Баня</span>
+              <span class="tag">🍽️ Ресторан</span>
+              <span class="tag">🎿 Горные лыжи</span>
+            </div>
+          </div>
+
+          <!-- Price table -->
+          <div class="bg-green-50 rounded-xl p-4 mb-6 text-sm">
+            <p class="font-semibold text-green-900 mb-2">💰 Цены (примерные)</p>
+            <div class="space-y-1 text-gray-600">
+              <div class="flex justify-between"><span>Коттедж (2 чел.)</span><span class="font-semibold text-green-800">от 80 000 тг/сут</span></div>
+              <div class="flex justify-between"><span>Коттедж (4 чел.)</span><span class="font-semibold text-green-800">от 120 000 тг/сут</span></div>
+              <div class="flex justify-between"><span>SPA + коттедж</span><span class="font-semibold text-green-800">от 150 000 тг/сут</span></div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-3">
+            <a href="https://wa.me/77777777777?text=%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20BearLog"
+               target="_blank" rel="noopener"
+               class="flex-1 min-w-[140px] bg-green-700 hover:bg-green-600 text-white font-semibold py-3 px-5 rounded-xl transition-all text-center hover:scale-105 shadow-md shadow-green-900/20"
+               data-i18n="bases.btn.book">Забронировать</a>
+            <button onclick="openModal('bearlog')"
+               class="flex-1 min-w-[140px] border-2 border-green-700 text-green-700 hover:bg-green-50 font-semibold py-3 px-5 rounded-xl transition-all text-center"
+               data-i18n="bases.btn.details">Подробнее</button>
+            <a href="https://bearlog.kz" target="_blank" rel="noopener"
+               class="px-4 py-3 bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium rounded-xl transition-all text-sm flex items-center gap-1"
+               data-i18n="bases.website">🔗 Сайт</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Taiga Shale ───────────────────────────────────────────────── -->
+      <div id="taiga" class="base-filterable fade-in-card rounded-2xl overflow-hidden shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 scroll-mt-24" data-price="mid">
+        <div class="relative h-64 overflow-hidden group">
+          <img loading="lazy"
+               src="https://visiteast.kz/assets/components/phpthumbof/cache/baza-otdyixa-%C2%ABsinegore%C2%BB.d816bd4f128ee378c00b60cd38f4ec4c.jpg"
+               alt="Риддер Тайга Шале снегоходы рыбалка баня"
+               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+          <div class="absolute top-4 left-4 flex gap-2">
+            <span class="bg-green-700/80 text-white text-xs font-bold px-3 py-1.5 rounded-full backdrop-blur-sm">🌲 ТАЙГА</span>
+            <span class="bg-blue-600/80 text-white text-xs font-bold px-3 py-1.5 rounded-full backdrop-blur-sm">❄️ ЗИМА</span>
+          </div>
+          <div class="absolute bottom-4 left-4 right-4 flex items-end justify-between">
+            <h2 class="font-playfair text-xl font-bold text-white drop-shadow-lg" data-i18n="bases.taiga.title">Риддер Тайга Шале</h2>
+            <span class="price-badge shadow-lg">50–200 тыс тг</span>
+          </div>
+        </div>
+
+        <div class="p-7">
+          <p class="text-gray-600 leading-relaxed mb-5" data-i18n="bases.taiga.desc">
+            Уютные шале в сердце тайги...
+          </p>
+
+          <div class="mb-5">
+            <p class="text-xs text-gray-400 font-semibold uppercase tracking-wide mb-2" data-i18n="bases.services">Услуги</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="tag">🏡 Шале</span>
+              <span class="tag">🛁 Баня</span>
+              <span class="tag">🛷 Снегоходы</span>
+              <span class="tag">🎣 Рыбалка</span>
+              <span class="tag">⛺ Беседки</span>
+              <span class="tag">🌲 Частная территория</span>
+            </div>
+          </div>
+
+          <div class="bg-green-50 rounded-xl p-4 mb-6 text-sm">
+            <p class="font-semibold text-green-900 mb-2">💰 Цены (примерные)</p>
+            <div class="space-y-1 text-gray-600">
+              <div class="flex justify-between"><span>Шале (2–4 чел.)</span><span class="font-semibold text-green-800">50 000–100 000 тг/сут</span></div>
+              <div class="flex justify-between"><span>VIP шале + баня</span><span class="font-semibold text-green-800">100 000–200 000 тг/сут</span></div>
+              <div class="flex justify-between"><span>Снегоходный тур</span><span class="font-semibold text-green-800">+ доп. стоимость</span></div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-3">
+            <a href="https://wa.me/77777777777?text=%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%A0%D0%B8%D0%B4%D0%B4%D0%B5%D1%80%20%D0%A2%D0%B0%D0%B9%D0%B3%D0%B0%20%D0%A8%D0%B0%D0%BB%D0%B5"
+               target="_blank" rel="noopener"
+               class="flex-1 min-w-[140px] bg-green-700 hover:bg-green-600 text-white font-semibold py-3 px-5 rounded-xl transition-all text-center hover:scale-105 shadow-md shadow-green-900/20"
+               data-i18n="bases.btn.book">Забронировать</a>
+            <button onclick="openModal('taiga')"
+               class="flex-1 min-w-[140px] border-2 border-green-700 text-green-700 hover:bg-green-50 font-semibold py-3 px-5 rounded-xl transition-all text-center"
+               data-i18n="bases.btn.details">Подробнее</button>
+            <a href="https://visiteast.kz" target="_blank" rel="noopener"
+               class="px-4 py-3 bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium rounded-xl transition-all text-sm flex items-center gap-1"
+               data-i18n="bases.website">🔗 Сайт</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Kedrova ────────────────────────────────────────────────────── -->
+      <div id="kedrova" class="base-filterable fade-in-card rounded-2xl overflow-hidden shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 scroll-mt-24" data-price="budget">
+        <div class="relative h-64 overflow-hidden group">
+          <img loading="lazy"
+               src="https://visiteast.kz/assets/components/phpthumbof/cache/kedrovka%20%284%29.d816bd4f128ee378c00b60cd38f4ec4c.jpg"
+               alt="Кедровка база отдыха семейная"
+               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+          <div class="absolute top-4 left-4 flex gap-2">
+            <span class="bg-green-600/90 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow">👨‍👩‍👧 СЕМЬЯ</span>
+            <span class="bg-amber-500/90 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow">💰 БЮДЖЕТ</span>
+          </div>
+          <div class="absolute bottom-4 left-4 right-4 flex items-end justify-between">
+            <h2 class="font-playfair text-2xl font-bold text-white drop-shadow-lg" data-i18n="bases.kedrova.title">Кедровка</h2>
+            <span class="price-badge shadow-lg">от 32 000 тг/сут</span>
+          </div>
+        </div>
+
+        <div class="p-7">
+          <p class="text-gray-600 leading-relaxed mb-5" data-i18n="bases.kedrova.desc">
+            Семейная база отдыха в окружении кедрового леса...
+          </p>
+
+          <div class="mb-5">
+            <p class="text-xs text-gray-400 font-semibold uppercase tracking-wide mb-2" data-i18n="bases.services">Услуги</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="tag">🏠 Домики 6 мест</span>
+              <span class="tag">🍽️ Питание</span>
+              <span class="tag">⛺ Беседки</span>
+              <span class="tag">🔥 Мангал</span>
+              <span class="tag">🚗 Парковка</span>
+              <span class="tag">🌲 Кедровый лес</span>
+            </div>
+          </div>
+
+          <div class="bg-green-50 rounded-xl p-4 mb-6 text-sm">
+            <p class="font-semibold text-green-900 mb-2">💰 Цены (примерные)</p>
+            <div class="space-y-1 text-gray-600">
+              <div class="flex justify-between"><span>Домик 6 мест</span><span class="font-semibold text-green-800">32 000 тг/сут</span></div>
+              <div class="flex justify-between"><span>С питанием (3 раза)</span><span class="font-semibold text-green-800">+ 3 000 тг/чел</span></div>
+              <div class="flex justify-between"><span>Беседка (4 ч)</span><span class="font-semibold text-green-800">5 000 тг</span></div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-3">
+            <a href="https://wa.me/77777777777?text=%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%9A%D0%B5%D0%B4%D1%80%D0%BE%D0%B2%D0%BA%D1%83"
+               target="_blank" rel="noopener"
+               class="flex-1 min-w-[140px] bg-green-700 hover:bg-green-600 text-white font-semibold py-3 px-5 rounded-xl transition-all text-center hover:scale-105 shadow-md shadow-green-900/20"
+               data-i18n="bases.btn.book">Забронировать</a>
+            <button onclick="openModal('kedrova')"
+               class="flex-1 min-w-[140px] border-2 border-green-700 text-green-700 hover:bg-green-50 font-semibold py-3 px-5 rounded-xl transition-all text-center"
+               data-i18n="bases.btn.details">Подробнее</button>
+            <a href="https://limpopotravel.kz" target="_blank" rel="noopener"
+               class="px-4 py-3 bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium rounded-xl transition-all text-sm flex items-center gap-1"
+               data-i18n="bases.website">🔗 Сайт</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Igloo Lodges ───────────────────────────────────────────────── -->
+      <div id="igloo" class="base-filterable fade-in-card rounded-2xl overflow-hidden shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 scroll-mt-24" data-price="luxury">
+        <div class="relative h-64 overflow-hidden group">
+          <img loading="lazy"
+               src="https://images.unsplash.com/photo-1521401830884-6c03c1c87ebb?auto=format&fit=crop&w=800&q=80"
+               alt="Igloo Lodges A-frame домики баня фурако Риддер"
+               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+          <div class="absolute top-4 left-4 flex gap-2">
+            <span class="bg-blue-600/90 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow">✨ UNIQUE</span>
+            <span class="bg-indigo-600/90 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow">A-FRAME</span>
+          </div>
+          <div class="absolute bottom-4 left-4 right-4 flex items-end justify-between">
+            <h2 class="font-playfair text-2xl font-bold text-white drop-shadow-lg" data-i18n="bases.igloo.title">Igloo Lodges</h2>
+            <span class="price-badge shadow-lg" data-i18n="bases.price.request">По запросу</span>
+          </div>
+        </div>
+
+        <div class="p-7">
+          <p class="text-gray-600 leading-relaxed mb-5" data-i18n="bases.igloo.desc">
+            Уникальные A-frame домики в стиле скандинавского дизайна...
+          </p>
+
+          <div class="mb-5">
+            <p class="text-xs text-gray-400 font-semibold uppercase tracking-wide mb-2" data-i18n="bases.services">Услуги</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="tag">🔺 A-frame домики</span>
+              <span class="tag">🛁 Баня</span>
+              <span class="tag">🛁 Фурако (японская ванна)</span>
+              <span class="tag">🏔️ Панорамный вид</span>
+              <span class="tag">📸 Фотосессии</span>
+              <span class="tag">🌟 Звёздное небо</span>
+            </div>
+          </div>
+
+          <div class="bg-blue-50 rounded-xl p-4 mb-6 text-sm">
+            <p class="font-semibold text-blue-900 mb-2">💰 Цены</p>
+            <div class="space-y-1 text-gray-600">
+              <div class="flex justify-between"><span>A-frame домик</span><span class="font-semibold text-blue-800" data-i18n="bases.price.request">По запросу</span></div>
+              <div class="text-gray-400 text-xs">Уточняйте актуальные цены через WhatsApp или сайт</div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-3">
+            <a href="https://wa.me/77777777777?text=%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20Igloo%20Lodges"
+               target="_blank" rel="noopener"
+               class="flex-1 min-w-[140px] bg-green-700 hover:bg-green-600 text-white font-semibold py-3 px-5 rounded-xl transition-all text-center hover:scale-105 shadow-md shadow-green-900/20"
+               data-i18n="bases.btn.book">Забронировать</a>
+            <button onclick="openModal('igloo')"
+               class="flex-1 min-w-[140px] border-2 border-green-700 text-green-700 hover:bg-green-50 font-semibold py-3 px-5 rounded-xl transition-all text-center"
+               data-i18n="bases.btn.details">Подробнее</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Comparison table -->
+    <div class="mt-16 overflow-x-auto">
+      <h2 class="font-playfair text-2xl font-bold text-green-900 mb-6 section-heading left-align">Сравнение баз</h2>
+      <table class="w-full text-sm border-collapse rounded-2xl overflow-hidden shadow-lg">
+        <thead>
+          <tr class="bg-green-800 text-white">
+            <th class="text-left px-5 py-4 font-semibold">База</th>
+            <th class="text-center px-4 py-4 font-semibold">Цена/сут</th>
+            <th class="text-center px-4 py-4 font-semibold hidden sm:table-cell">Бассейн</th>
+            <th class="text-center px-4 py-4 font-semibold hidden sm:table-cell">Баня</th>
+            <th class="text-center px-4 py-4 font-semibold hidden md:table-cell">Рыбалка</th>
+            <th class="text-center px-4 py-4 font-semibold hidden md:table-cell">SPA</th>
+            <th class="text-center px-4 py-4 font-semibold">Вместимость</th>
+          </tr>
+        </thead>
+        <tbody class="bg-white">
+          <tr class="border-b border-gray-100 hover:bg-green-50 transition-colors">
+            <td class="px-5 py-4 font-semibold text-green-900">⭐ BearLog</td>
+            <td class="px-4 py-4 text-center text-amber-600 font-bold">от 80 000</td>
+            <td class="px-4 py-4 text-center hidden sm:table-cell text-green-600">✓</td>
+            <td class="px-4 py-4 text-center hidden sm:table-cell text-green-600">✓</td>
+            <td class="px-4 py-4 text-center hidden md:table-cell text-gray-400">—</td>
+            <td class="px-4 py-4 text-center hidden md:table-cell text-green-600">✓</td>
+            <td class="px-4 py-4 text-center text-gray-600">2–10 чел.</td>
+          </tr>
+          <tr class="border-b border-gray-100 hover:bg-green-50 transition-colors">
+            <td class="px-5 py-4 font-semibold text-green-900">🌲 Тайга Шале</td>
+            <td class="px-4 py-4 text-center text-amber-600 font-bold">50–200 тыс</td>
+            <td class="px-4 py-4 text-center hidden sm:table-cell text-gray-400">—</td>
+            <td class="px-4 py-4 text-center hidden sm:table-cell text-green-600">✓</td>
+            <td class="px-4 py-4 text-center hidden md:table-cell text-green-600">✓</td>
+            <td class="px-4 py-4 text-center hidden md:table-cell text-gray-400">—</td>
+            <td class="px-4 py-4 text-center text-gray-600">2–8 чел.</td>
+          </tr>
+          <tr class="border-b border-gray-100 hover:bg-green-50 transition-colors">
+            <td class="px-5 py-4 font-semibold text-green-900">🍃 Кедровка</td>
+            <td class="px-4 py-4 text-center text-green-600 font-bold">32 000</td>
+            <td class="px-4 py-4 text-center hidden sm:table-cell text-gray-400">—</td>
+            <td class="px-4 py-4 text-center hidden sm:table-cell text-gray-400">—</td>
+            <td class="px-4 py-4 text-center hidden md:table-cell text-gray-400">—</td>
+            <td class="px-4 py-4 text-center hidden md:table-cell text-gray-400">—</td>
+            <td class="px-4 py-4 text-center text-gray-600">до 6 чел.</td>
+          </tr>
+          <tr class="hover:bg-green-50 transition-colors">
+            <td class="px-5 py-4 font-semibold text-green-900">✨ Igloo Lodges</td>
+            <td class="px-4 py-4 text-center text-blue-600 font-bold">По запросу</td>
+            <td class="px-4 py-4 text-center hidden sm:table-cell text-gray-400">—</td>
+            <td class="px-4 py-4 text-center hidden sm:table-cell text-green-600">✓</td>
+            <td class="px-4 py-4 text-center hidden md:table-cell text-gray-400">—</td>
+            <td class="px-4 py-4 text-center hidden md:table-cell text-gray-400">—</td>
+            <td class="px-4 py-4 text-center text-gray-600">2–4 чел.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── CTA ────────────────────────────────────────────────────────────── -->
+<section class="py-16 bg-green-900 text-white">
+  <div class="max-w-3xl mx-auto px-4 text-center">
+    <h2 class="font-playfair text-2xl sm:text-3xl font-bold mb-4">Не нашли подходящий вариант?</h2>
+    <p class="text-green-200 mb-8">Напишите нам — подберём базу под ваш бюджет и запросы</p>
+    <a href="https://wa.me/77777777777?text=%D0%9F%D0%BE%D0%BC%D0%BE%D0%B3%D0%B8%D1%82%D0%B5%20%D0%B2%D1%8B%D0%B1%D1%80%D0%B0%D1%82%D1%8C%20%D0%B1%D0%B0%D0%B7%D1%83%20%D0%BE%D1%82%D0%B4%D1%8B%D1%85%D0%B0%20%D0%B2%20%D0%A0%D0%B8%D0%B4%D0%B4%D0%B5%D1%80%D0%B5"
+       target="_blank" rel="noopener"
+       class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white font-semibold px-8 py-4 rounded-full transition-all hover:scale-105 shadow-xl shadow-green-950/40 text-lg"
+       data-i18n="common.book_whatsapp">💬 Написать в WhatsApp</a>
+  </div>
+</section>
+
+<!-- ── FOOTER ─────────────────────────────────────────────────────────── -->
+<footer class="bg-green-950 text-white pt-14 pb-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
+      <div>
+        <div class="flex items-center gap-2 mb-4"><span class="text-3xl">🏔️</span><span class="text-xl font-bold font-playfair">Риддер</span></div>
+        <p class="text-green-300 text-sm leading-relaxed" data-i18n="hero.subtitle">Откройте для себя удивительный мир гор, тайги и чистых рек.</p>
+        <p class="mt-3 text-green-400 text-sm flex items-center gap-1">📍 <span data-i18n="footer.city">Риддер, ВКО, Казахстан</span></p>
+      </div>
+      <div>
+        <h4 class="font-bold text-lg mb-5" data-i18n="footer.nav">Навигация</h4>
+        <ul class="space-y-2 text-green-300">
+          <li><a href="index.html" class="hover:text-white transition-colors" data-i18n="nav.home">Главная</a></li>
+          <li><a href="sights.html" class="hover:text-white transition-colors" data-i18n="nav.sights">Достопримечательности</a></li>
+          <li><a href="bases.html" class="text-white font-medium" data-i18n="nav.bases">Базы отдыха</a></li>
+          <li><a href="index.html#gallery" class="hover:text-white transition-colors" data-i18n="nav.gallery">Галерея</a></li>
+          <li><a href="index.html#contact" class="hover:text-white transition-colors" data-i18n="nav.contact">Контакты</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold text-lg mb-5" data-i18n="footer.connect">Связаться</h4>
+        <div class="flex gap-3 mb-4">
+          <a href="https://wa.me/77777777777" target="_blank" class="w-10 h-10 bg-green-600 hover:bg-green-500 rounded-full flex items-center justify-center transition-colors">
+            <svg viewBox="0 0 24 24" class="w-5 h-5 fill-white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+          <a href="https://t.me/ridder_tourism" target="_blank" class="w-10 h-10 bg-blue-600 hover:bg-blue-500 rounded-full flex items-center justify-center transition-colors">
+            <svg viewBox="0 0 24 24" class="w-5 h-5 fill-white"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+          </a>
+        </div>
+        <p class="text-green-400 text-sm">+7 (777) 777-77-77</p>
+      </div>
+    </div>
+    <div class="border-t border-green-800/60 pt-6 text-center text-green-500 text-sm">
+      <p data-i18n="footer.rights">© 2025 Риддер — Сокровищница природы. Все права защищены.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════════════ MODALS ══════════════════════════════════════════════ -->
+
+<!-- BearLog Modal -->
+<div id="modal-bearlog" class="modal-backdrop fixed inset-0 z-[100] bg-black/75 hidden items-center justify-center p-4">
+  <div class="modal-content bg-white rounded-2xl w-full max-w-2xl shadow-2xl">
+    <div class="relative h-56 overflow-hidden rounded-t-2xl">
+      <img src="https://visiteast.kz/assets/components/phpthumbof/cache/gromotuha.d816bd4f128ee378c00b60cd38f4ec4c.jpg"
+           alt="BearLog база отдыха Риддер" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+      <button onclick="closeModal('bearlog')" class="absolute top-4 right-4 w-9 h-9 bg-white/20 hover:bg-white/40 backdrop-blur-sm text-white rounded-full flex items-center justify-center text-xl transition-colors">&times;</button>
+      <div class="absolute bottom-4 left-6">
+        <h2 class="font-playfair text-2xl font-bold text-white">BearLog</h2>
+        <span class="bg-amber-500 text-white text-xs font-bold px-2 py-1 rounded-full">⭐ PREMIUM</span>
+      </div>
+    </div>
+    <div class="p-7">
+      <p class="text-gray-600 leading-relaxed mb-5" data-i18n="bases.bearlog.desc">Премиальная база отдыха…</p>
+      <div class="grid grid-cols-2 gap-3 mb-6 text-sm">
+        <div class="bg-green-50 p-3 rounded-xl"><span class="font-semibold text-green-800">🏠</span> Коттеджи люкс</div>
+        <div class="bg-green-50 p-3 rounded-xl"><span class="font-semibold text-green-800">🏊</span> Бассейн закрытый</div>
+        <div class="bg-green-50 p-3 rounded-xl"><span class="font-semibold text-green-800">💆</span> SPA-комплекс</div>
+        <div class="bg-green-50 p-3 rounded-xl"><span class="font-semibold text-green-800">🛷</span> Снегоходы / Багги</div>
+        <div class="bg-green-50 p-3 rounded-xl"><span class="font-semibold text-green-800">🛁</span> Баня / Сауна</div>
+        <div class="bg-green-50 p-3 rounded-xl"><span class="font-semibold text-green-800">🍽️</span> Ресторан</div>
+      </div>
+      <div class="flex gap-3">
+        <a href="https://wa.me/77777777777?text=%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20BearLog"
+           target="_blank" rel="noopener" onclick="closeModal('bearlog')"
+           class="flex-1 bg-green-700 hover:bg-green-600 text-white font-semibold py-3 rounded-xl text-center transition-all"
+           data-i18n="common.book_whatsapp">💬 Забронировать в WhatsApp</a>
+        <a href="https://bearlog.kz" target="_blank" rel="noopener"
+           class="px-5 py-3 bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium rounded-xl transition-all text-sm"
+           data-i18n="bases.website">🔗 Сайт</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Taiga Modal -->
+<div id="modal-taiga" class="modal-backdrop fixed inset-0 z-[100] bg-black/75 hidden items-center justify-center p-4">
+  <div class="modal-content bg-white rounded-2xl w-full max-w-2xl shadow-2xl">
+    <div class="relative h-56 overflow-hidden rounded-t-2xl">
+      <img src="https://visiteast.kz/assets/components/phpthumbof/cache/baza-otdyixa-%C2%ABsinegore%C2%BB.d816bd4f128ee378c00b60cd38f4ec4c.jpg"
+           alt="Тайга Шале база отдыха Риддер" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+      <button onclick="closeModal('taiga')" class="absolute top-4 right-4 w-9 h-9 bg-white/20 hover:bg-white/40 backdrop-blur-sm text-white rounded-full flex items-center justify-center text-xl transition-colors">&times;</button>
+      <div class="absolute bottom-4 left-6">
+        <h2 class="font-playfair text-2xl font-bold text-white" data-i18n="bases.taiga.title">Риддер Тайга Шале</h2>
+        <span class="bg-green-700 text-white text-xs font-bold px-2 py-1 rounded-full">🌲 ТАЙГА</span>
+      </div>
+    </div>
+    <div class="p-7">
+      <p class="text-gray-600 leading-relaxed mb-5" data-i18n="bases.taiga.desc">Уютные шале…</p>
+      <div class="grid grid-cols-2 gap-3 mb-6 text-sm">
+        <div class="bg-green-50 p-3 rounded-xl">🏡 Шале в тайге</div>
+        <div class="bg-green-50 p-3 rounded-xl">🛁 Традиционная баня</div>
+        <div class="bg-green-50 p-3 rounded-xl">🛷 Снегоходные туры</div>
+        <div class="bg-green-50 p-3 rounded-xl">🎣 Рыбалка на реке</div>
+        <div class="bg-green-50 p-3 rounded-xl">⛺ Беседки / Мангал</div>
+        <div class="bg-green-50 p-3 rounded-xl">🌲 Частная территория</div>
+      </div>
+      <div class="flex gap-3">
+        <a href="https://wa.me/77777777777?text=%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%A2%D0%B0%D0%B9%D0%B3%D0%B0%20%D0%A8%D0%B0%D0%BB%D0%B5"
+           target="_blank" rel="noopener" onclick="closeModal('taiga')"
+           class="flex-1 bg-green-700 hover:bg-green-600 text-white font-semibold py-3 rounded-xl text-center transition-all"
+           data-i18n="common.book_whatsapp">💬 Забронировать в WhatsApp</a>
+        <a href="https://visiteast.kz" target="_blank" rel="noopener"
+           class="px-5 py-3 bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium rounded-xl transition-all text-sm"
+           data-i18n="bases.website">🔗 Сайт</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Kedrova Modal -->
+<div id="modal-kedrova" class="modal-backdrop fixed inset-0 z-[100] bg-black/75 hidden items-center justify-center p-4">
+  <div class="modal-content bg-white rounded-2xl w-full max-w-2xl shadow-2xl">
+    <div class="relative h-56 overflow-hidden rounded-t-2xl">
+      <img src="https://visiteast.kz/assets/components/phpthumbof/cache/kedrovka%20%284%29.d816bd4f128ee378c00b60cd38f4ec4c.jpg"
+           alt="Кедровка кедровый лес домики" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+      <button onclick="closeModal('kedrova')" class="absolute top-4 right-4 w-9 h-9 bg-white/20 hover:bg-white/40 backdrop-blur-sm text-white rounded-full flex items-center justify-center text-xl transition-colors">&times;</button>
+      <div class="absolute bottom-4 left-6">
+        <h2 class="font-playfair text-2xl font-bold text-white" data-i18n="bases.kedrova.title">Кедровка</h2>
+        <span class="bg-amber-500 text-white text-xs font-bold px-2 py-1 rounded-full">💰 БЮДЖЕТ</span>
+      </div>
+    </div>
+    <div class="p-7">
+      <p class="text-gray-600 leading-relaxed mb-5" data-i18n="bases.kedrova.desc">Семейная база…</p>
+      <div class="grid grid-cols-2 gap-3 mb-6 text-sm">
+        <div class="bg-green-50 p-3 rounded-xl">🏠 Домики на 6 мест</div>
+        <div class="bg-green-50 p-3 rounded-xl">🍽️ Домашнее питание</div>
+        <div class="bg-green-50 p-3 rounded-xl">⛺ Беседки / Мангал</div>
+        <div class="bg-green-50 p-3 rounded-xl">🚗 Парковка</div>
+        <div class="bg-green-50 p-3 rounded-xl">🌲 Кедровый лес</div>
+        <div class="bg-green-50 p-3 rounded-xl">👨‍👩‍👧 Семейный формат</div>
+      </div>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-3 mb-5 text-sm text-amber-800">
+        💡 Домик на 6 человек — всего <strong>32 000 тг/сутки</strong>. Отличный выбор для семейного отдыха!
+      </div>
+      <div class="flex gap-3">
+        <a href="https://wa.me/77777777777?text=%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%9A%D0%B5%D0%B4%D1%80%D0%BE%D0%B2%D0%BA%D1%83"
+           target="_blank" rel="noopener" onclick="closeModal('kedrova')"
+           class="flex-1 bg-green-700 hover:bg-green-600 text-white font-semibold py-3 rounded-xl text-center transition-all"
+           data-i18n="common.book_whatsapp">💬 Забронировать в WhatsApp</a>
+        <a href="https://limpopotravel.kz" target="_blank" rel="noopener"
+           class="px-5 py-3 bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium rounded-xl transition-all text-sm"
+           data-i18n="bases.website">🔗 Сайт</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Igloo Modal -->
+<div id="modal-igloo" class="modal-backdrop fixed inset-0 z-[100] bg-black/75 hidden items-center justify-center p-4">
+  <div class="modal-content bg-white rounded-2xl w-full max-w-2xl shadow-2xl">
+    <div class="relative h-56 overflow-hidden rounded-t-2xl">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/%D0%A7%D0%B5%D0%BB%D1%8E%D1%81%D1%82%D0%BD%D0%B8%D0%BA_-_panoramio.jpg"
+           alt="Горы Риддера вид Челюстник" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+      <button onclick="closeModal('igloo')" class="absolute top-4 right-4 w-9 h-9 bg-white/20 hover:bg-white/40 backdrop-blur-sm text-white rounded-full flex items-center justify-center text-xl transition-colors">&times;</button>
+      <div class="absolute bottom-4 left-6">
+        <h2 class="font-playfair text-2xl font-bold text-white" data-i18n="bases.igloo.title">Igloo Lodges</h2>
+        <span class="bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded-full">✨ UNIQUE</span>
+      </div>
+    </div>
+    <div class="p-7">
+      <p class="text-gray-600 leading-relaxed mb-5" data-i18n="bases.igloo.desc">Уникальные A-frame домики…</p>
+      <div class="grid grid-cols-2 gap-3 mb-6 text-sm">
+        <div class="bg-blue-50 p-3 rounded-xl">🔺 A-frame дизайн</div>
+        <div class="bg-blue-50 p-3 rounded-xl">🛁 Японская фурако</div>
+        <div class="bg-blue-50 p-3 rounded-xl">🔥 Финская баня</div>
+        <div class="bg-blue-50 p-3 rounded-xl">🏔️ Панорама гор</div>
+        <div class="bg-blue-50 p-3 rounded-xl">🌟 Звёздное небо</div>
+        <div class="bg-blue-50 p-3 rounded-xl">📸 Фотосессии</div>
+      </div>
+      <div class="flex gap-3">
+        <a href="https://wa.me/77777777777?text=%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%86%D0%B5%D0%BD%D1%8B%20Igloo%20Lodges"
+           target="_blank" rel="noopener" onclick="closeModal('igloo')"
+           class="flex-1 bg-green-700 hover:bg-green-600 text-white font-semibold py-3 rounded-xl text-center transition-all"
+           data-i18n="common.book_whatsapp">💬 Уточнить цены в WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

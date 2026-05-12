@@ -1,0 +1,242 @@
+/* Ridder Tourism — Custom styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700;900&display=swap');
+
+:root {
+  --green-950: #052e16;
+  --green-900: #14532d;
+  --green-800: #166534;
+  --green-700: #15803d;
+  --green-600: #16a34a;
+  --green-500: #22c55e;
+  --green-100: #dcfce7;
+  --green-50:  #f0fdf4;
+  --amber-400: #fbbf24;
+  --amber-500: #f59e0b;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-playfair { font-family: 'Playfair Display', Georgia, serif; }
+
+/* ── Navbar ─────────────────────────────────────────────────────────────── */
+#navbar {
+  transition: background 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease;
+  backdrop-filter: blur(2px);
+}
+
+/* ── Hero parallax ───────────────────────────────────────────────────────── */
+.hero-section { position: relative; }
+.hero-bg {
+  will-change: transform;
+  transition: transform 0.05s linear;
+}
+
+/* ── Language buttons ────────────────────────────────────────────────────── */
+.lang-btn {
+  transition: background 0.2s, color 0.2s, font-weight 0.2s;
+  cursor: pointer;
+}
+.lang-btn:hover { opacity: 0.9; }
+
+/* ── Feature/sight/base cards ────────────────────────────────────────────── */
+.feature-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(21, 128, 61, 0.15);
+}
+
+.sight-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.sight-card:hover { transform: translateY(-4px); }
+
+/* ── Fade-in animation ───────────────────────────────────────────────────── */
+.fade-in-card {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.fade-in-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+/* ── Gallery ────────────────────────────────────────────────────────────── */
+.gallery-item {
+  overflow: hidden;
+  cursor: pointer;
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.gallery-item:hover img { transform: scale(1.08); }
+
+/* ── Gallery grid: masonry-like layout ─────────────────────────────────── */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 200px;
+  gap: 12px;
+}
+.gallery-grid .item-wide  { grid-column: span 2; }
+.gallery-grid .item-tall  { grid-row: span 2;    }
+.gallery-grid .item-big   { grid-column: span 2; grid-row: span 2; }
+
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 160px;
+  }
+  .gallery-grid .item-big { grid-column: span 2; grid-row: span 1; }
+}
+
+/* ── Lightbox ────────────────────────────────────────────────────────────── */
+#lightbox {
+  animation: fadeIn 0.2s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+#lightbox-img {
+  max-width: 95vw;
+  max-height: 92vh;
+  border-radius: 12px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+}
+
+/* ── Modal ───────────────────────────────────────────────────────────────── */
+.modal-backdrop {
+  animation: fadeIn 0.2s ease;
+}
+.modal-content {
+  animation: slideUp 0.3s ease;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+/* ── Filter buttons ─────────────────────────────────────────────────────── */
+.filter-btn {
+  transition: all 0.2s ease;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.filter-btn:hover { box-shadow: 0 4px 12px rgba(21, 128, 61, 0.3); }
+
+/* ── Base price badge ────────────────────────────────────────────────────── */
+.price-badge {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: white;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+/* ── Section headings ────────────────────────────────────────────────────── */
+.section-heading::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--green-600), var(--green-400, #4ade80));
+  border-radius: 2px;
+  margin: 12px auto 0;
+}
+.section-heading.left-align::after { margin-left: 0; }
+
+/* ── WhatsApp / Telegram quick links ─────────────────────────────────────── */
+.quick-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 12px;
+  transition: background 0.2s, transform 0.2s;
+  text-decoration: none;
+}
+.quick-link:hover { transform: translateX(4px); }
+
+/* ── Scroll indicator bounce ─────────────────────────────────────────────── */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0) translateX(-50%); }
+  50%       { transform: translateY(8px) translateX(-50%); }
+}
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 1.8s ease-in-out infinite;
+}
+
+/* ── Services tag list ───────────────────────────────────────────────────── */
+.tag {
+  display: inline-block;
+  background: var(--green-100);
+  color: var(--green-800);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  margin: 0.15rem;
+}
+
+/* ── Line clamp ──────────────────────────────────────────────────────────── */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ── Custom scrollbar ────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--green-50); }
+::-webkit-scrollbar-thumb { background: var(--green-600); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--green-700); }
+
+/* ── Focus styles ────────────────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--green-600);
+  outline-offset: 2px;
+}
+
+/* ── Print ───────────────────────────────────────────────────────────────── */
+@media print {
+  #navbar, footer, #lightbox { display: none !important; }
+}
+
+/* ── Responsive ──────────────────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .hero-section { min-height: 100svh; }
+}
