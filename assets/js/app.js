@@ -80,7 +80,7 @@ function handleFormSubmit(e) {
   const text = encodeURIComponent(
     `Здравствуйте! Меня зовут ${name}.\n${message}\nТелефон: ${phone}`
   );
-  window.open(`https://wa.me/77777777777?text=${text}`, '_blank');
+  window.open(`https://wa.me/77082097658?text=${text}`, '_blank');
 
   form.reset();
   const success = document.getElementById('form-success');
