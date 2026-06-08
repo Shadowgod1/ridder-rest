@@ -19,7 +19,7 @@
   const BASES = {
     bearlog: {
       name: 'BearLog',
-      img: 'https://visiteast.kz/assets/components/phpthumbof/cache/gromotuha.d816bd4f128ee378c00b60cd38f4ec4c.jpg',
+      img: 'assets/img/base-bearlog.jpg',
       cabins: [
         { id: 'c2',  name: { ru: 'Коттедж (2 чел.)', kz: 'Коттедж (2 адам)' }, cap: 2, price: 80000,  total: 5 },
         { id: 'c4',  name: { ru: 'Коттедж (4 чел.)', kz: 'Коттедж (4 адам)' }, cap: 4, price: 120000, total: 4 },
@@ -28,7 +28,7 @@
     },
     taiga: {
       name: 'Риддер Тайга Шале',
-      img: 'https://visiteast.kz/assets/components/phpthumbof/cache/baza-otdyixa-%C2%ABsinegore%C2%BB.d816bd4f128ee378c00b60cd38f4ec4c.jpg',
+      img: 'assets/img/base-taiga.jpg',
       cabins: [
         { id: 'sh',  name: { ru: 'Шале (2–4 чел.)',     kz: 'Шале (2–4 адам)' },     cap: 4, price: 60000,  total: 6 },
         { id: 'vip', name: { ru: 'VIP шале + баня',      kz: 'VIP шале + монша' },    cap: 6, price: 130000, total: 3 },
@@ -36,14 +36,14 @@
     },
     kedrova: {
       name: 'Кедровка',
-      img: 'https://visiteast.kz/assets/components/phpthumbof/cache/kedrovka%20%284%29.d816bd4f128ee378c00b60cd38f4ec4c.jpg',
+      img: 'assets/img/base-kedrova.jpg',
       cabins: [
         { id: 'd6', name: { ru: 'Домик на 6 мест', kz: '6 орынды үй' }, cap: 6, price: 32000, total: 8 },
       ],
     },
     igloo: {
       name: 'Igloo Lodges',
-      img: 'https://images.unsplash.com/photo-1521401830884-6c03c1c87ebb?auto=format&fit=crop&w=800&q=80',
+      img: 'assets/img/igloo-aframe.jpg',
       cabins: [
         { id: 'af',  name: { ru: 'A-frame домик (2 чел.)', kz: 'A-frame үй (2 адам)' }, cap: 2, price: 70000,  total: 4 },
         { id: 'afp', name: { ru: 'A-frame + фурако',       kz: 'A-frame + фурако' },    cap: 2, price: 95000,  total: 2 },
